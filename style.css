@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+body {
+  background-color: white;
+  font-family: "rubik", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.accordian {
+  width: 60%;
+  margin: 90px auto;
+  background-color: beige;
+  padding: 45px 45px;
+}
+
+.accordian .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+.accordian .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.accordian .label::before {
+  content: "+";
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+
+.accordian .content {
+  position: relative;
+  background: beige;
+  height: 0;
+  font-size: 20px;
+  text-align: justify;
+  width: auto;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.accordian hr {
+  width: 100;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+.accordian .container.active .content {
+  height: 150px;
+}
+
+.accordian .container.active .label::before {
+  content: "-";
+  font-size: 30px;
+}
